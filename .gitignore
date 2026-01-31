@@ -1,0 +1,3 @@
+# Don't commit raw data
+data/drebin/*.csv
+data/cape/*
