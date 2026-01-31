@@ -1,4 +1,12 @@
-.venv/
-data/drebin/*
+# Don't commit raw data
+data/drebin/*.csv
 data/cape/*
-!data/README.md
+# macOS Finder junk
+.DS_Store
+*/.DS_Store
+
+# Python virtual environment
+.venv/
+
+# Jupyter notebook checkpoints
+**/.ipynb_checkpoints/
