@@ -1,3 +1,4 @@
-# Don't commit raw data
-data/drebin/*.csv
+.venv/
+data/drebin/*
 data/cape/*
+!data/README.md
