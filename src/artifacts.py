@@ -1,15 +1,12 @@
 """
 Utilities for loading baseline models and vectorisers.
-
 This assumes therepo structure is:
-
     hybrid-av/
       saved/models/
         drebin_static_rf_best.pkl
         drebin_static_xgb_best.pkl
         cape_behavior_rf_best.pkl
         cape_behavior_tfidf.pkl
-
 and that this file lives in `hybrid-av/src/artifacts.py`.
 """
 
@@ -18,7 +15,7 @@ from joblib import load
 
 
 # Resolve repo root as "two levels up from this file".
-# src/artifacts.py -> src/ -> hybrid-av/
+# src/artifacts.py to src/ to hybrid-av/
 ROOT_DIR = Path(__file__).resolve().parents[1]
 MODEL_DIR = ROOT_DIR / "saved" / "models"
 

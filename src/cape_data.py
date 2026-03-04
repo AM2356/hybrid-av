@@ -1,6 +1,5 @@
 """
 Utilities for building the CAPE behaviour dataset in a reusable way.
-
 This module mirrors the logic from the behaviour baseline notebook:
   * load public_labels.csv
   * match rows to JSON reports in public_small_reports/
