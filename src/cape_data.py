@@ -23,10 +23,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 
 
-# -------------------------------------------------------------------
 # Paths
-# -------------------------------------------------------------------
-
 def get_cape_paths(project_dir: Path) -> Tuple[Path, Path]:
     """
     Return (labels_path, reports_dir) for the CAPE dataset.
@@ -48,10 +45,8 @@ def get_cape_paths(project_dir: Path) -> Tuple[Path, Path]:
     return labels_path, reports_dir
 
 
-# -------------------------------------------------------------------
-# Normalisation + API sequence extraction
-# -------------------------------------------------------------------
 
+# Normalisation + API sequence extraction
 def normalise_api_name(name: str) -> str:
     """
     Normalise a raw API / function / token string.
@@ -161,10 +156,8 @@ def extract_api_sequence(report: Dict) -> List[str]:
     return seq
 
 
-# -------------------------------------------------------------------
-# Build cape_df with filtering
-# -------------------------------------------------------------------
 
+# Build cape_df with filtering
 def build_cape_df(
     project_dir: Path,
     min_api_len: int = 10,

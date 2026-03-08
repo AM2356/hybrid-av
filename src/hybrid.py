@@ -19,7 +19,7 @@ from sklearn.base import ClassifierMixin
 from sklearn.ensemble import RandomForestClassifier
 
 
-# ---------- feature concatenation for early fusion ----------
+# feature concatenation for early fusion
 
 def concat_features(X_static, X_behavior):
     """
@@ -64,8 +64,8 @@ class LateFusionScorer:
         if not (0.0 <= self.alpha <= 1.0):
             raise ValueError(f"alpha must be in [0, 1], got {self.alpha}")
 
-        # If user didn't specify a class order, and both models have the same
-        # ordering, we can safely adopt static_model.classes_ as canonical.
+        # If didn't specify a class order, and both models have the same
+        # ordering, can safely adopt static_model.classes_ as canonical
         if self.class_order is None:
             if hasattr(self.static_model, "classes_") and hasattr(
                 self.behavior_model, "classes_"
@@ -75,8 +75,8 @@ class LateFusionScorer:
                 ):
                     self.class_order = list(self.static_model.classes_)
                 else:
-                    # We leave class_order as None and will raise a clearer
-                    # error when predict_proba is called.
+                    # leave class_order as None and will raise a clearer
+                    # error when predict_proba is called
                     self.class_order = None
 
     # internal helper
@@ -158,7 +158,7 @@ class GatedLateFusionScorer(LateFusionScorer):
     Late fusion with an optional gate on static confidence.
 
     Behaviour model is only invoked for samples where the maximum
-    static probability is below static_conf_thresh. This is your
+    static probability is below static_conf_thresh. This is
     cost-aware hybrid path from the methodology.
     """
 
@@ -207,7 +207,7 @@ class GatedLateFusionScorer(LateFusionScorer):
         return p_hybrid
 
 
-# ---------- early fusion (feature concatenation) ----------
+#early fusion (feature concatenation)
 
 @dataclass
 class EarlyFusionModel:
