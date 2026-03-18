@@ -1,0 +1,4 @@
+user32.messageboxw user32.dispatchmessagew user32.translateacceleratorw
+gdi32.textoutw gdi32.stretchblt
+kernel32.getmodulehandlew kernel32.getprocaddress
+ucrtbase.memcpy ucrtbase.memmove ucrtbase.memset

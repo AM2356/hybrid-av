@@ -1,0 +1,5 @@
+kernel32.createfilea wininet.internetconnecta wininet.httpopena
+wininet.httpsendrequesta kernel32.writefile kernel32.closehandle
+ws2_32.socket ws2_32.connect ws2_32.send ws2_32.recv
+emotet_loader emotet_payload emotet_loader emotet_payload
+advapi32.regsetvalueexw advapi32.regcreatekeyw
