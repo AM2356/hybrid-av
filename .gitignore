@@ -10,3 +10,8 @@ data/cape/*
 
 # Jupyter notebook checkpoints
 **/.ipynb_checkpoints/
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
