@@ -1,2 +1,2 @@
 # hybrid-av
-hybrid static + behavioral malware detector built upon ClamAV
+hybrid, static and behavioral malware pipelines built upon ClamAV as a design-level prototype
